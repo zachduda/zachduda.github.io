@@ -55,13 +55,12 @@
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function() {
       if (this.readyState == 4 && this.status == 200) {
-          const reply = this.responseText;
-          if(reply !== "no_session") {
-            document.getElementById("empajx").innerHTML = "<br>Signed In as " +reply.username;
+          const reply = JSON.parse(this.responseText);
+            document.getElementById("empajx").innerHTML = "<br>Total Spins: " + reply.Total_Spins;
           }
       }
     };
-    xhttp.open("GET", "https://empanadas.io/server/getdata.php?type=account", true);
+    xhttp.open("GET", "https://empanadas.io/api/v1/stats.php", true);
     xhttp.send();
   </script>
 </html>
