@@ -46,20 +46,39 @@
           </div>
         </div>
       </div>
+      <h3>Jeff</h3>
+      <img width="200" id="jeffimg"></img>
+      <p id="jeffmsg">Loading Jeff's Daily Message...</p>
     </div>
   </body>
    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" crossorigin="anonymous"></script>
    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" crossorigin="anonymous"></script>
    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.1/js/bootstrap.min.js" crossorigin="anonymous"></script>
   <script>
-    var xhttp = new XMLHttpRequest();
-    xhttp.onreadystatechange = function() {
-      if (this.readyState == 4 && this.status == 200) {
-          const reply = JSON.parse(this.responseText);
-          document.getElementById("empajx").innerHTML = "<br>Total Spins: " + reply.Total_Spins;
-      }
-    };
-    xhttp.open("GET", "https://empanadas.io/api/v1/stats.php", true);
-    xhttp.send();
+    function getSpins() {
+      var xhttp = new XMLHttpRequest();
+      xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            const reply = JSON.parse(this.responseText);
+            document.getElementById("empajx").innerHTML = "<br>Total Spins: " + reply.Total_Spins;
+        }
+      };
+      xhttp.open("GET", "https://empanadas.io/api/v1/stats.php", true);
+      xhttp.send();
+    }
+    function getJeff() {
+      var xhttp = new XMLHttpRequest();
+      xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            const reply = JSON.parse(this.responseText);
+            document.getElementById("jeffmsg").innerHTML = reply.msg;
+            document.getElementById("jeffimg").src = "https://empanadas.io/Content/Images/Jeff/"+reply.image;
+        }
+      };
+      xhttp.open("GET", "https://empanadas.io/api/v1/jeff.php", true);
+      xhttp.send();
+    }
+    getSpins();
+    getJeff();
   </script>
 </html>
