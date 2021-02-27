@@ -42,21 +42,21 @@ let serverresponsems;
 
 let iththvodl = false;
 
-const spin1 = new Audio('Content/Sounds/SpinGame/Speenz/1.mp3');
-const spin2 = new Audio('Content/Sounds/SpinGame/Speenz/2.mp3');
-const spin3 = new Audio('Content/Sounds/SpinGame/Speenz/3.mp3');
-const spin4 = new Audio('Content/Sounds/SpinGame/Speenz/4.mp3');
-const spin5 = new Audio('Content/Sounds/SpinGame/Speenz/5.mp3');
-const spin6 = new Audio('Content/Sounds/SpinGame/Speenz/6.mp3');
-const spin7 = new Audio('Content/Sounds/SpinGame/Speenz/7.mp3');
-const spin8 = new Audio('Content/Sounds/SpinGame/Speenz/8.mp3');
-const a2 = new Audio('Content/Sounds/button.mp3');
-const a3 = new Audio('Content/Sounds/soundtoggle.mp3');
-const aerr = new Audio('Content/Sounds/error.wav');
-const alock = new Audio('Content/Sounds/SpinGame/locked.mp3');
-const azap = new Audio('Content/Sounds/SpinGame/zap.mp3');
-const asmokealarm = new Audio('Content/Sounds/SpinGame/smokealarm.mp3');
-const aextinguish = new Audio('Content/Sounds/SpinGame/Extinguish.mp3');
+const spin1 = new Audio('/Content/Sounds/SpinGame/Speenz/1.mp3');
+const spin2 = new Audio('/Content/Sounds/SpinGame/Speenz/2.mp3');
+const spin3 = new Audio('/Content/Sounds/SpinGame/Speenz/3.mp3');
+const spin4 = new Audio('/Content/Sounds/SpinGame/Speenz/4.mp3');
+const spin5 = new Audio('/Content/Sounds/SpinGame/Speenz/5.mp3');
+const spin6 = new Audio('/Content/Sounds/SpinGame/Speenz/6.mp3');
+const spin7 = new Audio('/Content/Sounds/SpinGame/Speenz/7.mp3');
+const spin8 = new Audio('/Content/Sounds/SpinGame/Speenz/8.mp3');
+const a2 = new Audio('/Content/Sounds/button.mp3');
+const a3 = new Audio('/Content/Sounds/soundtoggle.mp3');
+const aerr = new Audio('/Content/Sounds/error.wav');
+const alock = new Audio('/Content/Sounds/SpinGame/locked.mp3');
+const azap = new Audio('/Content/Sounds/SpinGame/zap.mp3');
+const asmokealarm = new Audio('/Content/Sounds/SpinGame/smokealarm.mp3');
+const aextinguish = new Audio('/Content/Sounds/SpinGame/Extinguish.mp3');
 let atimetravel;
 const emp = document.getElementById('mysweetboi');
 const empimg = document.getElementById('mrempanada');
@@ -574,7 +574,7 @@ function playerWon(rewards) {
     } // End of if JSONData.Prestige equals 100
 
     if (playaudio && !winaudioplaying) {
-        let a4 = new Audio('Content/Sounds/SpinGame/spinwin.mp3'); // Victory Screetch! REEE
+        let a4 = new Audio('/Content/Sounds/SpinGame/spinwin.mp3'); // Victory Screetch! REEE
         a4.play();
         winaudioplaying = true;
 
@@ -1120,7 +1120,7 @@ function buyAutoSpinner() {
     JSONData.Auto_Spinners += 1;
 
     if(atimetravel  == null && JSONData.Auto_Spinners == 1) {
-        atimetravel = new Audio('Content/Sounds/SpinGame/timetravel.mp3');
+        atimetravel = new Audio('/Content/Sounds/SpinGame/timetravel.mp3');
     }
 
     doAutoSpin();
@@ -1517,7 +1517,7 @@ function buyAscend() {
         if (result.value) {
             const originalaudio = playaudio;
             let ascendmsg = "As you gaze upon your remarkable achievements, you watch your noble Empanada answer its calling up in the clouds. Your hard work will forever be honored.<br><br>";
-            const ascendaudio = new Audio('Content/Sounds/SpinGame/ascend.mp3');
+            const ascendaudio = new Audio('/Content/Sounds/SpinGame/ascend.mp3');
 
             if (playaudio) {
                 ascendaudio.play();
@@ -2155,7 +2155,7 @@ function finishLoading() {
     }
 
     if(JSONData.Auto_Spinners >= 1) {
-        atimetravel = new Audio('Content/Sounds/SpinGame/timetravel.mp3');
+        atimetravel = new Audio('/Content/Sounds/SpinGame/timetravel.mp3');
     }
 
     window.removeEventListener("checkedStorage", loadPlayerDataFromEvent);
