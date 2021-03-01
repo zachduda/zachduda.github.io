@@ -8,7 +8,7 @@
  * https://empanadas.io -- A website by Zach
  */
 'use strict';
-const gameversion = "v4.9.12";
+const gameversion = "v5.0.0-GIT";
 const pagetitle = "Empanada Spin";
 
 //                             isburnt  notmainwindow, canclickwarnings, spinvar

@@ -1,0 +1,587 @@
+@font-face {
+    font-family: 'montserrat';
+    src: url('../../Fonts/montserrat-bold.woff2') format('woff2'),
+         url('../../Fonts/montserrat-bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: auto;
+}
+
+@font-face {
+    font-family: 'montserrat';
+    src: url('../../Fonts/montserrat-medium.woff2') format('woff2'),
+         url('../../Fonts/montserrat-medium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: auto;
+}
+
+@font-face {
+    font-family: 'montserrat';
+    src: url('../../Fonts/montserrat-light.woff2') format('woff2'),
+         url('../../Fonts/montserrat-light.woff') format('woff');
+    font-weight: 100;
+    font-style: normal;
+    font-display: auto;
+}
+
+.content {
+    transition: margin-left .5s;
+}
+
+.rainbow {
+    -webkit-animation: rainbow 3s infinite;
+    -ms-animation: rainbow 3s infinite;
+    animation: rainbow 3s infinite;
+}
+
+.zoom {
+    -webkit-animation: zoom 5s infinite;
+    -ms-animation: zoom 5s infinite;
+    animation: zoom 5s infinite;
+}
+
+@-webkit-keyframes zoom {
+  0% { transform: scale(1.0); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1.0); }
+}
+
+@keyframes zoom {
+  0% { transform: scale(1.0); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1.0); }
+}
+
+@-ms-keyframes zoom {
+    0% { transform: scale(1.0); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1.0); }
+}
+
+.rainbow {
+  background-image: repeating-linear-gradient(45deg, violet, indigo, blue, green, yellow, orange, red, violet);
+  text-align: center;
+  background-size: 800% 800%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 24px;
+  animation: rainbowanim 8s ease infinite;
+}
+
+@keyframes rainbowanim {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 25%}
+    100%{background-position:0% 50%}
+}
+
+@-webkit-keyframes rainbowanim {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 25%}
+    100%{background-position:0% 50%}
+}
+
+@-ms-keyframes rainbowanim {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 25%}
+    100%{background-position:0% 50%}
+}
+
+html,
+body,
+div {
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+    touch-action: manipulation;
+    font-family: 'montserrat';
+}
+
+body {
+    background-color: white;
+}
+
+.swal2-title {
+    font: normal 18px sans-serif;
+}
+
+img {
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-user-drag: none;
+    user-drag: none;
+    -webkit-touch-callout: none;
+}
+
+.empanada {
+    height: 359px;
+    width: 416px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-top: -179.5px;
+    margin-left: -208px;
+    z-index: 3;
+    cursor: pointer;
+    touch-action: manipulation;
+}
+
+.settingsbutton {
+    cursor: pointer;
+    position: fixed;
+    bottom: 1%;
+    right: 1%;
+    z-index: 5;
+    cursor: pointer;
+    transition: all 0.15s;
+}
+
+.settingsbutton p {
+    text-decoration: none;
+    color: gray;
+    font-size: 32px;
+    padding: 0;
+    margin: 0;
+    transition: transform 0.8s;
+}
+
+.settingsbutton p:hover {
+    transform: rotate(90deg);
+}
+
+.rank {
+    height: 200px;
+    width: 200px;
+    position: fixed;
+    top: 15px;
+    left: 20px;
+    z-index: 4;
+}
+
+.rankinfo {
+    font-size: 14px;
+    position: fixed;
+    text-align: center;
+    top: 185.0px;
+    font-weight: 200;
+}
+
+.rankname {
+    font-size: 20px;
+    position: fixed;
+    text-align: center;
+    top: 150.0px;
+    font-weight: 400;
+}
+
+.spin {
+    animation-name: spin;
+    animation-duration: 500ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in;
+    -webkit-animation-name: spin;
+    -webkit-animation-duration: 500ms;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: ease-in;
+    -moz-animation-name: spin;
+    -moz-animation-duration: 500ms;
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-timing-function: ease-in;
+    -ms-animation-name: spin;
+    -ms-animation-duration: 500ms;
+    -ms-animation-iteration-count: infinite;
+    -ms-animation-timing-function: ease-in;
+}
+
+.bounce {
+    -webkit-animation-name: bounce;
+    animation-name: bounce;
+    -webkit-animation-duration: 0.1s;
+    animation-duration: 0.1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+@-ms-keyframes spin {
+    from {
+        -ms-transform: rotate(0deg);
+    }
+    to {
+        -ms-transform: rotate(360deg);
+    }
+}
+
+@-moz-keyframes spin {
+    from {
+        -moz-transform: rotate(0deg);
+    }
+    to {
+        -moz-transform: rotate(360deg);
+    }
+}
+
+@-webkit-keyframes spin {
+    from {
+        -webkit-transform: rotate(0deg);
+    }
+    to {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.spincount {
+    font-weight: 100;
+    font-size: 42px;
+    margin: 0;
+    padding: 0;
+    position: fixed;
+    text-align: center;
+    bottom: 2.5%;
+    width: 100%;
+    z-index: 5;
+}
+
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@-webkit-keyframes bounce {
+    0% {
+        -webkit-transform: translateY(0px);
+    }
+    40% {
+        -webkit-transform: translateY(-10px);
+    }
+    60% {
+        -webkit-transform: translateY(-5px);
+    }
+    100% {
+        -webkit-transform: translateY(0px);
+    }
+}
+
+@keyframes bounce {
+    0% {
+        -webkit-transform: translateY(0px);
+    }
+    40% {
+        -webkit-transform: translateY(-10px);
+    }
+    60% {
+        -webkit-transform: translateY(-5px);
+    }
+    100% {
+        -webkit-transform: translateY(0px);
+    }
+}
+
+.pepperbox {
+    position: fixed;
+    float: right;
+    padding: 0px 1% 0px 0px;
+    right: 1%;
+    top: 64px;
+    transition: margin 0.5s;
+    z-index: 5;
+    overflow: hidden;
+}
+
+.firebox {
+    position: fixed;
+    float: right;
+    padding: 0px 1% 0px 0px;
+    right: 1%;
+    top: 114px;
+    transition: margin 0.5s;
+    z-index: 5;
+    overflow: hidden;
+}
+
+.smokealarmbox .fire {
+    padding: 0px 5px 0px 0px;
+}
+
+.smokealarmbox {
+    position: fixed;
+    float: right;
+    padding: 0px 1% 0px 0px;
+    right: 1%;
+    top: 114px;
+    transition: margin 0.5s;
+    z-index: 5;
+    overflow: hidden;
+}
+
+.extinguisherbox {
+    position: fixed;
+    float: right;
+    padding: 0px 1% 0px 0px;
+    right: 1%;
+    top: 164px;
+    transition: margin 0.5s;
+    z-index: 5;
+    overflow: hidden;
+}
+
+.hats {
+    cursor: pointer;
+    position: absolute;
+    width: 200px;
+    margin-top: 10%;
+    margin-left: 28%;
+    z-index: 5;
+}
+
+.frontnumber {
+    float: right;
+    padding: 7px 0px 0px 6px;
+    font-size: 25px;
+    overflow: hidden;
+}
+
+.sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    right: 0;
+    background: rgb(111, 101, 245);
+    background: linear-gradient(90deg, rgba(111, 101, 245, 0.85) 0%, rgba(0, 212, 255, 1) 100%);
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 20px;
+}
+
+input[name="shopitem"] {
+    transition: all 0.8s;
+    /* Fade when hide/showing links in the shop */
+}
+
+.sidebar p {
+    padding: 10px 0px 0px 10px;
+    font-size: 28px;
+    font-weight: bold;
+    color: #ffff;
+    display: block;
+}
+
+.sidebar .price {
+    float: right;
+    margin-right: 1%;
+    margin-top: 2%;
+    font-size: 18px;
+    color: #ffff;
+}
+
+.sidebar a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: rgb(255, 255, 255, 0.6);
+    display: block;
+    transition: 0.15s, opacity 0.25s;
+    font-weight: 400;
+}
+
+.sidebar a:hover,
+.sidebar a:focus {
+    color: rgb(255, 255, 255, 1);
+}
+
+.sidebar a:hover[name="closebtn"],
+.sidebar a:focus[name="closebtn"] {
+    transform: scale(1.1);
+}
+
+.sidebar a:hover[name="shopitem"],
+.sidebar a:focus[name="shopitem"] {
+    background-color: rgb(0, 0, 0, 0.05);
+    padding: 12px 12px 12px 13px;
+}
+
+.sidebar .closebtn {
+    position: absolute;
+    top: 0;
+    right: 20px;
+    font-size: 45px;
+    margin-left: 50px;
+    transition: 0.15s;
+    opacity: 0;
+}
+
+.storebtn {
+    position: fixed;
+    font-size: 20px;
+    cursor: pointer;
+    background: rgb(111, 101, 245);
+    background: linear-gradient(90deg, rgba(111, 101, 245, 1) 0%, rgba(0, 212, 255, 1) 100%);
+    color: white;
+    padding: 12px 17px;
+    right: 1%;
+    top: 1%;
+    border: none;
+    transition: opacity 250ms ease-in-out;
+    font-weight: 300;
+    border-radius: 5px;
+}
+
+.storebtn:hover {
+    background-color: #444;
+}
+
+.settings {
+    height: 0%;
+    width: 100%;
+    position: fixed;
+    z-index: 11;
+    top: 0;
+    left: 0;
+    background: linear-gradient(280deg, rgba(111, 101, 245, 0.8) 0%, rgba(0, 212, 255, 0.8) 100%);
+    overflow-y: hidden;
+    transition: 0.5s;
+}
+
+.settings-options {
+    position: relative;
+    top: 18%;
+    width: 100%;
+    text-align: center;
+    transition: all 0.15s;
+}
+
+input[type="file"] {
+    display: none;
+}
+
+.settings h1 {
+    font-size: 45px;
+    text-decoration: underline;
+    color: white;
+}
+
+.settings a {
+    padding: 8px 0px;
+    margin: 0 auto;
+    width: 70%;
+    text-decoration: none;
+    font-size: 30px;
+    color: #818181;
+    display: block;
+    transition: 0.15s;
+}
+
+.settings p {
+    padding: 10px 0px;
+    margin: 0 auto;
+    width: 70%;
+    text-decoration: none;
+    font-size: 18px;
+    color: #818181;
+    display: block;
+    transition: 0.15s;
+}
+
+.settings a:hover,
+.settings a:focus {
+    color: white;
+    background-color: rgb(255, 255, 255, 0.05);
+    padding: 16px 0px;
+}
+
+
+.settings #gameinfo {
+    text-align:right;
+    position:absolute;
+    padding: 10px;
+    bottom:1.5%;
+    right:1.5%;
+}
+
+@media screen and (max-height: 555px) {
+    .sidebar {
+        padding-top: 6px;
+        overflow-y: auto;
+    }
+    .sidebar a {
+        font-size: 20px;
+        padding: 6px 6px 6px 32px;
+    }
+    .sidebar #price {
+        font-size: 13px;
+    }
+    .settings {
+        overflow-y: auto;
+    }
+    .settings a {
+        font-size: 20px;
+    }
+    .settings-options {
+        top: 3%;
+    }
+}
+
+@media screen and (max-width: 560px) {
+    .empanada {
+        height: 320px;
+        width: 370.808px;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        margin-top: -158px;
+        margin-left: -185.40px;
+        z-index: 3;
+        cursor: pointer;
+        touch-action: manipulation;
+    }
+    .sidebar {
+        padding-top: 10px;
+    }
+    .sidebar a {
+        font-size: 20px;
+        padding: 6px 6px 6px 32px;
+    }
+    .sidebar #price {
+        font-size: 13px;
+    }
+    .settings a:hover,
+    .settings a:focus {
+        color: white;
+        background-color: rgba(255, 255, 255, 0.05);
+        padding: 16px 0px;
+    }
+
+    .settings a {
+        width: 95%;
+    }
+}
+
+.tippy-box[data-theme~='shopmenu'] {
+    background-color: rgb(74, 74, 74);
+    color: white;
+    text-shadow: 2px 2px 2px #4A4A4A;
+    background: linear-gradient(280deg, rgba(111, 101, 245, 0.7) 0%, rgba(0, 212, 255, 0.7) 100%);
+    text-align: center;
+}
+
+.tippy-box[data-theme~='bland'] {
+    background-color: rgba(38, 38, 38, 0.85);
+    color: white;
+    text-align: center;
+}
