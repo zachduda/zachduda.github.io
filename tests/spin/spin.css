@@ -443,14 +443,9 @@ input[name="shopitem"] {
     transition: all 0.15s;
 }
 
-input[type="file"] {
-    display: none;
-}
-
 .settings h1 {
     font-size: 45px;
     text-decoration: underline;
-    color: white;
 }
 
 .settings a {
@@ -459,7 +454,7 @@ input[type="file"] {
     width: 70%;
     text-decoration: none;
     font-size: 30px;
-    color: #818181;
+    color: white;
     display: block;
     transition: 0.15s;
 }
@@ -470,7 +465,7 @@ input[type="file"] {
     width: 70%;
     text-decoration: none;
     font-size: 18px;
-    color: #818181;
+    color: white;
     display: block;
     transition: 0.15s;
 }
@@ -478,7 +473,7 @@ input[type="file"] {
 .settings a:hover,
 .settings a:focus {
     color: white;
-    background-color: rgb(255, 255, 255, 0.05);
+    background-color: rgb(0, 0, 0, 0.05);
     padding: 16px 0px;
 }
 
