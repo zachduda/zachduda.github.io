@@ -1,28 +1,5 @@
-@font-face {
-    font-family: 'montserrat';
-    src: url('../../Fonts/montserrat-bold.woff2') format('woff2'),
-         url('../../Fonts/montserrat-bold.woff') format('woff');
-    font-weight: bold;
-    font-style: normal;
-    font-display: auto;
-}
-
-@font-face {
-    font-family: 'montserrat';
-    src: url('../../Fonts/montserrat-medium.woff2') format('woff2'),
-         url('../../Fonts/montserrat-medium.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-    font-display: auto;
-}
-
-@font-face {
-    font-family: 'montserrat';
-    src: url('../../Fonts/montserrat-light.woff2') format('woff2'),
-         url('../../Fonts/montserrat-light.woff') format('woff');
-    font-weight: 100;
-    font-style: normal;
-    font-display: auto;
+* {
+    font-family: 'Poppins', sans-serif;
 }
 
 .content {
