@@ -445,23 +445,25 @@ input[name="shopitem"] {
 .settings h1 {
     font-size: 45px;
     text-decoration: underline;
+    color: white;
 }
 
 .settings a {
     padding: 8px 0px;
     margin: 0 auto;
-    width: 70%;
+    width: 60%;
     text-decoration: none;
     font-size: 30px;
     color: white;
     display: block;
+    opacity: 0.9;
     transition: 0.15s;
 }
 
 .settings p {
     padding: 10px 0px;
     margin: 0 auto;
-    width: 70%;
+    width: 60%;
     text-decoration: none;
     font-size: 18px;
     color: white;
@@ -471,9 +473,10 @@ input[name="shopitem"] {
 
 .settings a:hover,
 .settings a:focus {
-    color: white;
     background-color: rgb(0, 0, 0, 0.05);
     padding: 16px 0px;
+    opacity: 1;
+    border-radius: 20px;
 }
 
 
