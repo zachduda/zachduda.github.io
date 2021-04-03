@@ -22,7 +22,7 @@
       </div>
       <div class="card-deck animated fadeInLeft slower">
         <div class="card f-item">
-          <img src="https://empanadas.io/Content/Images/banner.png" class="card-img-top" alt="Empanadas.io" crossorigin="anonymous">
+          <img src="https://empanadas.io/Content/Images/banner.png" class="card-img-top" alt="Empanadas.io">
           <div class="card-body">
             <h5 class="card-title">Empanadas.io</h5>
             <p class="card-text">A website dedicated to Empanadas<span id="empajx"></span></p>
@@ -48,7 +48,7 @@
       </div>
       <div class="card-deck animated fadeInLeft slower">
         <div class="card f-item">
-          <img src="https://empanadas.io/Content/Images/Jeff/jeff.gif" width="100px" class="card-img-top" id="jeffimg" alt="Jeff" crossorigin="anonymous">
+          <img src="https://empanadas.io/Content/Images/Jeff/jeff.gif" width="100px" class="card-img-top" id="jeffimg" alt="Jeff">
           <div class="card-body">
             <h5 class="card-title">Jeff The Giraffe</h5>
             <p class="card-text"><span class="text-secondary">The mascot for Empanadas.io! He updates weekly with some positive motiviation.</span><hr><span id="jeffmsg">Jeff is Thinking...</span></p>
@@ -71,6 +71,7 @@
         }
       };
       xhttp.open("GET", "https://api.empanadas.io/v1/stats.php", true);
+      xhttp.withCredentials = false;
       xhttp.send();
     }
     function getJeff() {
@@ -83,6 +84,7 @@
         }
       };
       xhttp.open("GET", "https://api.empanadas.io/v1/jeff.php", true);
+      xhttp.withCredentials = false;
       xhttp.send();
     }
     getSpins();
