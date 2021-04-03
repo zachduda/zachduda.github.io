@@ -22,7 +22,7 @@
       </div>
       <div class="card-deck animated fadeInLeft slower">
         <div class="card f-item">
-          <img src="https://empanadas.io/Content/Images/banner.png" class="card-img-top" alt="Empanadas.io">
+          <img src="https://empanadas.io/Content/Images/banner.png" class="card-img-top" alt="Empanadas.io" crossorigin="anonymous">
           <div class="card-body">
             <h5 class="card-title">Empanadas.io</h5>
             <p class="card-text">A website dedicated to Empanadas<span id="empajx"></span></p>
@@ -42,13 +42,13 @@
           <div class="card-body">
             <h5 class="card-title">He1ium</h5>
             <p class="card-text">Hand-made music for your ear drums.</p>
-            <a href="https://open.spotify.com/artist/4lU3anPxGazRPJJtvePvQb" target="_blank" class="btn btn-success">Listen on Spotify</a>
+            <a href="https://he1ium.crd.co" target="_blank" class="btn btn-primary">Visit Website</a>
           </div>
         </div>
       </div>
       <div class="card-deck animated fadeInLeft slower">
         <div class="card f-item">
-          <img src="https://empanadas.io/Content/Images/Jeff/jeff.gif" height="25" class="card-img-top" id="jeffimg" alt="Jeff">
+          <img src="https://empanadas.io/Content/Images/Jeff/jeff.gif" width="100px" class="card-img-top" id="jeffimg" alt="Jeff" crossorigin="anonymous">
           <div class="card-body">
             <h5 class="card-title">Jeff The Giraffe</h5>
             <p class="card-text"><span class="text-secondary">The mascot for Empanadas.io! He updates weekly with some positive motiviation.</span><hr><span id="jeffmsg">Jeff is Thinking...</span></p>
@@ -70,7 +70,7 @@
             document.getElementById("empajx").innerHTML = "<br>Total Spins: " + reply.data.Total_Spins;
         }
       };
-      xhttp.open("GET", "https://empanadas.io/api/v1/stats.php", true);
+      xhttp.open("GET", "https://api.empanadas.io/v1/stats.php", true);
       xhttp.send();
     }
     function getJeff() {
@@ -82,7 +82,7 @@
             document.getElementById("jeffimg").src = "https://empanadas.io/Content/Images/Jeff/"+reply.image;
         }
       };
-      xhttp.open("GET", "https://empanadas.io/api/v1/jeff.php", true);
+      xhttp.open("GET", "https://api.empanadas.io/v1/jeff.php", true);
       xhttp.send();
     }
     getSpins();
