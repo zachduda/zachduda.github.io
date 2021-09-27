@@ -19,7 +19,8 @@
   <body class="bg-dark">
     <div class="wrapper">
       <div class="text-center text-light pt-2 pb-4">
-        <h1 class="animated fadeInUp">Zach Duda</h1>
+        <img src="https://empanadas.io/Content/Images/blank.png" width="250px" id="pfp">
+        <h1 class="animated fadeInUp" id="name">Zach Duda</h1>
         <p class="animated fadeIn delay-1s">Howdy! I create Sites, Plugings, and Apps.</p>
       </div>
       <hr style="color: lightgray;">
@@ -62,6 +63,7 @@
               <h5 class="card-title">Empanadas.io</h5>
               <p class="card-text">A site I created that's dedicated to empanadas. Try playing one of the games! The <b>Spin Game</b> alone has over <b><span id="empspins">0</span> Spins</b> from member accounts.</p>
               <a href="https://empanadas.io" target="_blank" class="btn btn-primary"><i class="fas fa-eye me-3"></i>Visit Site</a>
+              <a id="myemplink" href="#" target="_blank" class="btn btn-info"><i class="fas fa-user me-3"></i>My Profile</a>
             </div>
           </div>
         </div>
@@ -102,6 +104,20 @@
       xhttp.withCredentials = false;
       xhttp.send();
     }
+    function getEmpAct() {
+      var xhttp = new XMLHttpRequest();
+      xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            const reply = JSON.parse(this.responseText);
+            document.getElementById('pfp').innerHTML = result.pfp;
+            document.getElementById('myemplink').innerHTML = "https://empanadas.io/server/profile?u="+result.uuid;
+        }
+      };
+      xhttp.open("GET", "https://api.empanadas.io/v1/zach.php", true);
+      xhttp.withCredentials = false;
+      xhttp.send();
+    }
     getSpins();
+    getEmpAct();
   </script>
 </html>
