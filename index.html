@@ -19,15 +19,14 @@
   <body class="bg-dark">
     <div class="wrapper">
       <div class="row text-center text-light pt-2 pb-4">
-        <div class="col-sm-6">
-        <img src="https://empanadas.io/Content/Images/blank.png" width="150px" id="pfp" style="border-radius:100%;">
+        <div class="col-lg-6">
+        <img class="img-fluid" src="https://empanadas.io/Content/Images/blank.png" id="pfp" style="border-radius:100%;">
       </div>
-        <div class="col-sm-6">
+        <div class="col-lg-4">
           <h1 class="animated fadeInUp bold" id="name">Zach Duda</h1>
           <p class="animated fadeIn delay-1s">Howdy! I create Sites, Plugings, and Apps.</p>
         </div>
       </div>
-      <br>
       <hr style="color: lightgray;">
       <br>
       <div class="row animated fadeInLeft">
@@ -130,7 +129,7 @@
         if (this.readyState == 4 && this.status == 200) {
             const reply = JSON.parse(this.responseText);
             document.getElementById('pfp').src = emplink+reply.pfp_path_lg+reply.pfp;
-            document.getElementById('myemplink').href = emplink+"/server/profile?u="+reply.uuid;
+            document.getElementById('myemplink').href = emplink+"server/profile?u="+reply.uuid;
         }
       };
       xhttp.open("GET", "https://api.empanadas.io/v1/zach.php", true);
@@ -143,7 +142,7 @@
         if (this.readyState == 4 && this.status == 200) {
             const reply = JSON.parse(this.responseText);
             document.getElementById('jeffmsg').innerHTML = reply.message + '<br><span class="mt-2 text-secondary float-end" style="font-size:12px;">Updated ' + reply.time + '</span>';
-            document.getElementById('jeffimg').src = emplink+"/Content/Images/Jeff/"+reply.image;
+            document.getElementById('jeffimg').src = emplink+"Content/Images/Jeff/"+reply.image;
             document.getElementById('jefftime').innerHTML = reply.time;
         }
       };
