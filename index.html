@@ -2,7 +2,7 @@
   <head>
     <title>Zach Duda</title>
     <meta charset="UTF-8">
-    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="/favicon.ico" id="favicon" type="image/x-icon">
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet" crossorigin="anonymous" />
@@ -91,8 +91,8 @@
             </div>
           </div>
         </div>
-        <div class="col-sm-12">
-          <div class="card f-item mb-4" style="max-width: 480px;">
+        <div class="col-sm-6">
+          <div class="card f-item mb-4">
             <img src="https://empanadas.io/Content/Images/blank.png" width="200" class="card-img-top" id="jeffimg" alt="Jeff">
             <div class="card-body">
               <h5 class="card-title">Jeff The Giraffe</h5>
@@ -157,7 +157,9 @@
       xhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
             const reply = JSON.parse(this.responseText);
-            document.getElementById('pfp').src = emplink+reply.pfp_path_lg+reply.pfp;
+            const finalpfp = emplink+reply.pfp_path_lg+reply.pfp;
+            document.getElementById('pfp').src = finalpfp;
+            document.getElementById('favicon').src = finalpfp;
             document.getElementById('myemplink').href = emplink+"server/profile?u="+reply.uuid;
         }
       };
