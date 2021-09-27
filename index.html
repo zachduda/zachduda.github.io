@@ -116,7 +116,7 @@
       xhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
             const reply = JSON.parse(this.responseText);
-            document.getElementById('empspins').innerHTML = commaint(parseint(reply.data.Total_Spins));
+            document.getElementById('empspins').innerHTML = commaint(parseInt(reply.data.Total_Spins, 10));
         }
       };
       xhttp.open("GET", "https://api.empanadas.io/v1/stats.php", true);
