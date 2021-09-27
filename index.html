@@ -92,9 +92,9 @@
             <img src="https://empanadas.io/Content/Images/blank.png" class="card-img-top" id="jeffimg" alt="Jeff">
             <div class="card-body">
               <h5 class="card-title">Jeff The Giraffe</h5>
-              <p class="card-text">A weekly motivational mascot that is here to give you that boost!</p>
+              <p class="card-text text-primary" style="font-size:12px;">A weekly motivational mascot that is here to give you that boost!</p>
               <hr>
-              <p class="card-text" id="jeffmsg"><br><span class="text-secondary" style="font-size:12px;">Updated <span id="jefftime"></span></span></p>
+              <p class="card-text" id="jeffmsg"></p>
             </div>
           </div>
         </div>
@@ -133,8 +133,8 @@
       xhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
             const reply = JSON.parse(this.responseText);
-            document.getElementById('jeffmsg').innerHTML = reply.message;
-            document.getElementById('jeffimg').src = reply.image;
+            document.getElementById('jeffmsg').innerHTML = reply.message + '<br><span class="text-secondary float-right" style="font-size:12px;">Updated ' + reply.time + '</span>';
+            document.getElementById('jeffimg').src = "https://empanadas.io/Content/Images/Jeff/"+reply.image;
             document.getElementById('jefftime').innerHTML = reply.time;
         }
       };
