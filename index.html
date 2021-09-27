@@ -171,7 +171,7 @@
       xhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
             const reply = JSON.parse(this.responseText);
-            document.getElementById('jeffmsg').innerHTML = reply.message + '<br><span class="mt-2 text-secondary float-end" style="font-size:12px;">Updated ' + reply.time + '</span>';
+            document.getElementById('jeffmsg').innerHTML = reply.message + '<br><span class="mt-2 text-secondary float-end" style="font-size:12px;"><i class="fas fa-clock me-3"></i>Updated ' + reply.time + '</span>';
             document.getElementById('jeffimg').src = emplink+"Content/Images/Jeff/"+reply.image;
             document.getElementById('jefftime').innerHTML = reply.time;
         }
