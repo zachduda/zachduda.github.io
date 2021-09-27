@@ -30,7 +30,7 @@
             <img src="https://github.com/zachduda/ChatFeelings/blob/master/Images/chatfeelingsbanner.png?raw=true" class="card-img-top" alt="CF Banner">
             <div class="card-body">
               <h5 class="card-title">ChatFeelings</h5>
-              <p class="card-text">A chat based minecraft plugin with <b><span id='cfdownloads'>--,---</span></b> downloads that adds some emotion to your server!</p>
+              <p class="card-text">A chat based minecraft plugin with over <b><span id='cfdownloads'>100K</span></b> downloads that adds some emotion to your server!</p>
               <a href="https://www.spigotmc.org/resources/chatfeelings.12987/" target="_blank" class="btn btn-primary"><i class="fas fa-cloud-download-alt me-3"></i>Download</a>
             </div>
           </div>
@@ -102,34 +102,6 @@
       xhttp.withCredentials = false;
       xhttp.send();
     }
-    function getCF() {
-      var xhttp = new XMLHttpRequest();
-      xhttp.onreadystatechange = function() {
-        if (this.readyState == 4 && this.status == 200) {
-            const reply = JSON.parse(this.responseText);
-            document.getElementById('cfdownloads').innerHTML = reply.stats.downloads;
-        }
-      };
-      xhttp.open("GET", "https://api.spigotmc.org/simple/0.1/index.php?action=getResource&id=12987/", true);
-      xhttp.withCredentials = true;
-      xhttp.send();
-    }
-    function getEmpanadasAccount() {
-      // just a XSS test
-      var xhttp = new XMLHttpRequest();
-      xhttp.onreadystatechange = function() {
-        if (this.readyState == 4 && this.status == 200) {
-            if(reply == 1) {
-               console.log("Signed Into Empanadas.io");
-            }
-        }
-      };
-      xhttp.open("GET", "https://empanadas.io/server/getdata.php?type=session/", true);
-      xhttp.withCredentials = true;
-      xhttp.send();
-    }
-    getCF();
     getSpins();
-    getEmpanadasAccount();
   </script>
 </html>
