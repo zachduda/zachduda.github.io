@@ -63,7 +63,7 @@
               <h5 class="card-title">Empanadas.io</h5>
               <p class="card-text">A site I created that's dedicated to empanadas. Try playing one of the games! The <b>Spin Game</b> alone has over <b><span id="empspins">0</span> Spins</b> from member accounts.</p>
               <a href="https://empanadas.io" target="_blank" class="btn btn-primary"><i class="fas fa-eye me-3"></i>Visit Site</a>
-              <a id="myemplink" href="#" target="_blank" class="btn btn-info"><i class="fas fa-user me-3"></i>My Profile</a>
+              <a id="myemplink" href="#" target="_blank" class="btn btn-light"><i class="fas fa-user me-3"></i>Zach's Stats</a>
             </div>
           </div>
         </div>
@@ -110,7 +110,7 @@
         if (this.readyState == 4 && this.status == 200) {
             const reply = JSON.parse(this.responseText);
             document.getElementById('pfp').innerHTML = reply.pfp_path_lg+reply.pfp;
-            document.getElementById('myemplink').innerHTML = "https://empanadas.io/server/profile?u="+reply.uuid;
+            document.getElementById('myemplink').href = "https://empanadas.io/server/profile?u="+reply.uuid;
         }
       };
       xhttp.open("GET", "https://api.empanadas.io/v1/zach.php", true);
