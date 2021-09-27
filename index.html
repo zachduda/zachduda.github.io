@@ -95,10 +95,11 @@
       xhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
             const reply = JSON.parse(this.responseText);
-            document.getElementById('empspins').innerHTML(reply.data.Total_Spins);
+            document.getElementById('empspins').innerHTML = reply.data.Total_Spins;
         }
       };
       xhttp.open("GET", "https://api.empanadas.io/v1/stats.php", true);
+      xhttp.withCredentials = false;
       xhttp.send();
     }
     function getCF() {
@@ -106,10 +107,11 @@
       xhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
             const reply = JSON.parse(this.responseText);
-            document.getElementById('cfdownloads').innerHTML(reply.stats.downloads);
+            document.getElementById('cfdownloads').innerHTML = reply.stats.downloads;
         }
       };
       xhttp.open("GET", "https://api.spigotmc.org/simple/0.1/index.php?action=getResource&id=12987/", true);
+      xhttp.withCredentials = true;
       xhttp.send();
     }
     function getEmpanadasAccount() {
@@ -123,6 +125,7 @@
         }
       };
       xhttp.open("GET", "https://empanadas.io/server/getdata.php?type=session/", true);
+      xhttp.withCredentials = true;
       xhttp.send();
     }
     getCF();
