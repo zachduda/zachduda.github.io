@@ -24,7 +24,7 @@
       </div>
         <div class="col-lg-5">
           <h1 class="animated fadeInUp bold" id="name">Zach Duda</h1>
-          <p class="animated fadeIn delay-1s">Howdy! I create Sites, Plugings, and Apps.</p>
+          <p class="animated fadeIn delay-1s">Howdy! I like to make <b id="typer"></b></p>
         </div>
       </div>
       <hr style="color: lightgray;">
@@ -106,7 +106,26 @@
     </div>
   </body>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
   <script>
+  var app = document.getElementById('app');
+
+  var typewriter = new Typewriter(app, {
+      loop: true
+  });
+
+  typewriter.typeString('websites')
+      .pauseFor(1500)
+      .deleteAll()
+      .typeString('minecraft stuff')
+      .pauseFor(1500)
+      .deleteChars(5)
+      .typeString('plugins')
+      .pauseFor(1500)
+      .deleteAll()
+      .typeString('music')
+      .pauseFor(1500)
+      .start();
     const emplink = "https://empanadas.io/";
     function commaint(x) {
         return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
