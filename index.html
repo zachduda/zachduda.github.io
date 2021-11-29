@@ -7,9 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>@font-face{font-family:poppins;src:url("https://empanadas.io/Content/Fonts/Poppins-Black.ttf") format('truetype');font-weight:900;font-style:normal;font-display:auto}@font-face{font-family:poppins;src:url("https://empanadas.io/Content/Fonts/Poppins-Bold.ttf") format('truetype');font-weight:700;font-style:normal;font-display:auto}@font-face{font-family:poppins;src:url("https://empanadas.io/Content/Fonts/Poppins-MediumItalic.ttf") format('truetype');font-weight:500;font-style:italic;font-display:auto}@font-face{font-family:poppins;src:url("https://empanadas.io/Content/Fonts/Poppins-Regular.ttf") format('truetype');font-weight:400;font-style:normal;font-display:auto}@font-face{font-family:poppins;src:url("https://empanadas.io/Content/Fonts/Poppins-Light.ttf") format('truetype');font-weight:300;font-style:normal;font-display:auto}
     </style>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.compat.css" crossorigin="anonymous" />
-    <link rel="stylesheet" href="https://empanadas.io/Content/Icons/fa/css/all.min.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5/dist/css/bootstrap.min.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="/Content/lib/anm.css" crossorigin="anonymous" />
+    <link rel="stylesheet" href="/Content/lib/fa6.css" crossorigin="anonymous" />
+    <link rel="stylesheet" href="/Content/lib/bs5.css" crossorigin="anonymous" />
     <style>
       *{font-family: 'Poppins', sans-serif;}
       .wrapper{text-align: left;margin: auto;width: 95%;padding-top: 25px;max-width: 1000px;}
@@ -111,8 +111,8 @@
       </footer>
     </div>
   </body>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
-  <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+  <script src="/Content/lib/bs5.js" crossorigin="anonymous"></script>
+  <script src="/Content/lib/typ.js" crossorigin="anonymous"></script>
   <script>
     var typer=document.getElementById("typer"),typewriter=new Typewriter(typer,{loop:!0});typewriter.typeString("websites").pauseFor(1500).deleteAll().typeString("minecraft apps").pauseFor(1500).deleteChars(4).typeString("plugins").pauseFor(1500).deleteAll().typeString("awesome music").pauseFor(1e3).deleteChars(5).typeString("things").pauseFor(1e3).deleteAll().typeString("people smile").pauseFor(1500).deleteAll().typeString("motivational giraffes").pauseFor(2e3).start();const emplink="https://empanadas.io";function commaint(e){return e.toString().replace(/\B(?=(\d{3})+(?!\d))/g,",")}function getSpins(){var e=new XMLHttpRequest;e.onreadystatechange=function(){if(4==this.readyState&&200==this.status){const e=JSON.parse(this.responseText);document.getElementById("empspins").innerHTML=commaint(parseInt(e.data.Total_Spins,10))}},e.open("GET","https://api.empanadas.io/v1/stats.php",!0),e.withCredentials=!1,e.send()}let hrp=!1;function getEmpAct(){var e=new XMLHttpRequest;e.onreadystatechange=function(){if(4==this.readyState&&200==this.status){const e=JSON.parse(this.responseText),t=emplink+e.pfp_path_lg+e.pfp;hrp=1,document.getElementById("pfp").src=t,document.getElementById("pfp").style.display = null,document.getElementById("favicon").href=t,document.getElementById("myemplink").href=emplink+"/server/profile?u="+e.uuid}},e.open("GET","https://api.empanadas.io/v1/zach.php",!0),e.withCredentials=!1,e.send()}function getJeff(){var e=new XMLHttpRequest;e.onreadystatechange=function(){if(4==this.readyState&&200==this.status){const e=JSON.parse(this.responseText);document.getElementById("jeffmsg").innerHTML=e.message+'<br><span class="mt-2 float-end" style="color:lightgray;font-size:12px;"><i class="fas fa-clock me-2"></i>Updated '+e.time+"</span>",document.getElementById("jeffimg").src=emplink+"/Content/Images/Jeff/"+e.image,document.getElementById("jefftime").innerHTML=e.time}},e.open("GET","https://api.empanadas.io/v1/jeff.php",!0),e.withCredentials=!1,e.send()}document.getElementById("pfp").onload=(e=>{hrp&&document.getElementById("pfpld").remove()}),getSpins(),getEmpAct(),getJeff();
   </script>
