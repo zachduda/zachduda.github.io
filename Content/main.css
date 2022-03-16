@@ -1,0 +1,9 @@
+.wrapper{
+  text-align: left;margin: auto;width: 95%;padding-top: 25px;max-width: 1000px;
+}
+.f-item{
+  min-width: 240px;
+}
+.card-title {
+  font-weight: 800;
+}
