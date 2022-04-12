@@ -114,8 +114,15 @@
             </div>
           </div>
         </div>
-        <div class="col-md-12" id="linkedindyn" style="display:none;">
-            <div class="badge-base LI-profile-badge" data-locale="en_US" data-size="large" data-theme="dark" data-type="HORIZONTAL" data-vanity="zachary-duda-418b33221" data-version="v1"><a class="badge-base__link LI-simple-link" href="https://www.linkedin.com/in/zachary-duda-418b33221?trk=profile-badge">Zachary Duda</a></div>
+        <div class="col-sm-6">
+          <div class="card f-item mb-4" style="max-width: 480px;">
+            <img src="/Content/linkedin.svg" class="card-img-top" alt="LinkedIn Logo">
+            <div class="card-body">
+              <h5 class="card-title">LinkedIn</h5>
+              <p class="card-text">Interested in what I'm up to? <b>Connect</b> with me and get to know my education and see my experience on my LinkedIn page.</p>
+              <a href="https://www.linkedin.com/in/zacharyduda" target="_blank" class="btn btn-primary"><i class="fa-brands fa-linkedin me-3"></i>Connect on LinkedIn</a>
+            </div>
+          </div>
         </div>
         <div class="col-md-12">
           <div class="card f-item bg-secondary text-white mb-4">
@@ -135,7 +142,6 @@
   </body>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
   <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js" crossorigin="anonymous"></script>
-  <script src="https://platform.linkedin.com/badges/js/profile.js" async defer onload="document.getElementById('linkedindyn').style.display = null;"></script>
   <script>
     var typer=document.getElementById("typer"),typewriter=new Typewriter(typer,{loop:!0});typewriter.typeString("websites").pauseFor(1500).deleteAll().typeString("minecraft apps").pauseFor(1500).deleteChars(4).typeString("plugins").pauseFor(1500).deleteAll().typeString("awesome music").pauseFor(1e3).deleteChars(5).typeString("things").pauseFor(1e3).deleteAll().typeString("people smile").pauseFor(1500).deleteAll().typeString("motivational giraffes").pauseFor(2e3).start();const emplink="https://empanadas.io";function commaint(e){return e.toString().replace(/\B(?=(\d{3})+(?!\d))/g,",")}function getSpins(){var e=new XMLHttpRequest;e.onreadystatechange=function(){if(4==this.readyState&&200==this.status){const e=JSON.parse(this.responseText);document.getElementById("empspins").innerHTML=commaint(parseInt(e.data.Total_Spins,10))}},e.open("GET","https://api.empanadas.io/v1/stats.php",!0),e.withCredentials=!1,e.send()}let hrp=!1;function getEmpAct(){var e=new XMLHttpRequest;e.onreadystatechange=function(){if(4==this.readyState&&200==this.status){const e=JSON.parse(this.responseText),t=emplink+e.pfp_path_lg+e.pfp;hrp=1,document.getElementById("pfp").src=t,document.getElementById("pfp").style.display = null,document.getElementById("favicon").href=t,document.getElementById("myemplink").href=emplink+"/server/profile?u="+e.uuid}},e.open("GET","https://api.empanadas.io/v1/zach.php",!0),e.withCredentials=!1,e.send()}function getJeff(){var e=new XMLHttpRequest;e.onreadystatechange=function(){if(4==this.readyState&&200==this.status){const e=JSON.parse(this.responseText);document.getElementById("jeffmsg").innerHTML=e.message+'<br><span class="mt-2 float-end" style="color:lightgray;font-size:12px;"><i class="fas fa-clock me-2"></i>Updated '+e.time+"</span>",document.getElementById("jeffimg").src=emplink+"/Content/Images/Jeff/"+e.image,document.getElementById("jefftime").innerHTML=e.time}},e.open("GET","https://api.empanadas.io/v1/jeff.php",!0),e.withCredentials=!1,e.send()}document.getElementById("pfp").onload=(e=>{hrp&&document.getElementById("pfpld").remove()}),getSpins(),getEmpAct(),getJeff();
   </script>
